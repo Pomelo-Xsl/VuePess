@@ -9,14 +9,14 @@ const DOMAIN_NAME = 'xiesl.top' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
-  theme: 'vdoing', // 使用npm主题包
-  // theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
+  // theme: 'vdoing', // 使用npm主题包
+  theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
 
   locales: {
     '/': {
       lang: 'zh-CN',
       title: "Pomelo's Blog",
-      description: '我愿用我三生的烟火,换你一世的迷离',
+      description: '知识库',
     }
   },
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
@@ -34,16 +34,16 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           {
             text: 'AI',
             items: [
-              { text: '大模型部署流程（沐曦）', link: '/pages/8143cc480faf9a11/' },
+              { text: '大模型部署流程（沐曦）', link: '/pages/mx/' },
             ],
           },
           {
             text: '软件工程',
             items: [
-              { text: '《操作系统》', link: '/note/javascript/' },
-              { text: '《计算机网络》', link: '/note/js/' },
-              { text: '《Linux》', link: '/note/es6/' },
-              { text: '《工具与环境》', link: '/note/vue/' },
+              { text: '《操作系统》', link: '/note/op/' },
+              { text: '《计算机网络》', link: '/note/network/' },
+              { text: '《Linux》', link: '/note/linux/' },
+              { text: '《工具与环境》', link: '/note/tools/' },
             ],
           },
         ],
@@ -52,35 +52,35 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         text: '工程实践',
         link: '/ui/',
         items: [
-          { text: '《小项目》', link: '/pages/8309a5b876fc95e3/' },
+          { text: '《小项目》', link: '/pages/smallproject/' },
         ],
       },
       {
         text: '学习路线',
         link: '/technology/',
         items: [
-          { text: '健身小白', link: '/pages/9a7ee40fc232253e/' },
-          { text: '理财入门', link: '/pages/4c778760be26d8b3/' },
-          { text: '自媒体浅尝', link: '/pages/117708e0af7f0bd9/' },
-          { text: '计算机知识体系的建立', link: '/pages/41f87d890d0a02af/' },
+          { text: '健身小白', link: '/pages/gym/' },
+          { text: '理财入门', link: '/pages/wealth/' },
+          { text: '自媒体浅尝', link: '/pages/media/' },
+          { text: '计算机知识体系的建立', link: '/pages/cs/' },
         ],
       },
       {
         text: '个人成长',
         link: '/more/',
         items: [
-          { text: '《周报》', link: '/pages/f2a556/' },
-          { text: '《月报》', link: '/pages/aea6571b7a8bae86/' },
-          { text: '《年报》', link: '/pages/2d615df9a36a98ed/' },
+          { text: '《周报》', link: '/pages/week/' },
+          { text: '《月报》', link: '/pages/month/' },
+          { text: '《年报》', link: '/pages/year/' },
         ],
       },
       {
         text: '职业发展',
-        link: '/fz/',
+        link: '/carrer/',
         items: [
           {
             text: '恰点烂钱',
-            link: '/pages/beb6c0bd8a66cea6/',
+            link: '/pages/picking/',
           },
         ],
       },
@@ -90,11 +90,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [
           {
             text: '友链',
-            link: '/pages/beb6c0bd8a66ca6/',
+            link: '/pages/friends/',
           },
           {
             text: '收藏夹',
-            link: '/pages/beb6c0bd8a66ca6/',
+            link: '/pages/favorites/',
           },
         ],
       },
@@ -104,11 +104,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [
           {
             text: '关于本站',
-            link: '/pages/beb6c0bd8a66ca6/',
+            link: '/pages/station/',
           },
           {
             text: '关于博主',
-            link: '/pages/beb6c0bd8a66ca6/',
+            link: '/pages/another/',
           },
         ],
       },
@@ -125,12 +125,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/favicon.ico', // 导航栏logo
     repo: 'https://github.com/Pomelo-Xsl', // 导航栏右侧生成Github链接
-    searchMaxSuggestions: 10, // 搜索结果显示最大数
+    searchMaxSuggestions: 6, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
     // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
-    editLinks: true, // 启用编辑
-    editLinkText: '编辑',
+    // editLinks: true, // 启用编辑
+    // editLinkText: '编辑',
 
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
     sidebar: 'structuring',
@@ -142,33 +142,33 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     },
 
     // 博主信息 (显示在首页侧边栏)
-    blogger: {
-      avatar: '/img/Pomelo.jpg',
-      name: 'Pomelo',
-      slogan: '02年程序员一枚+未知名博主',
-    },
+    // blogger: {
+    //   avatar: '/img/Pomelo.jpg',
+    //   name: 'Pomelo',
+    //   slogan: '02年程序员一枚+未知名博主',
+    // },
 
     // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
-    social: {
-      // iconfontCssFile: '//at.alicdn.com/t/xxx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加。阿里图片库：https://www.iconfont.cn/
-      icons: [
-        {
-          iconClass: 'icon-youjian',
-          title: '发邮件',
-          link: 'mailto:xsl20020718@gmail.com',
-        },
-        {
-          iconClass: 'icon-github',
-          title: 'GitHub',
-          link: 'https://github.com/Pomelo-Xsl',
-        },
-        {
-          iconClass: 'icon-erji',
-          title: '听音乐',
-          link: 'https://music.163.com/#/playlist?id=755597173',
-        },
-      ],
-    },
+    // social: {
+    //   // iconfontCssFile: '//at.alicdn.com/t/xxx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加。阿里图片库：https://www.iconfont.cn/
+    //   icons: [
+    //     {
+    //       iconClass: 'icon-youjian',
+    //       title: '发邮件',
+    //       link: 'mailto:xsl20020718@gmail.com',
+    //     },
+    //     {
+    //       iconClass: 'icon-github',
+    //       title: 'GitHub',
+    //       link: 'https://github.com/Pomelo-Xsl',
+    //     },
+    //     {
+    //       iconClass: 'icon-erji',
+    //       title: '听音乐',
+    //       link: 'https://music.163.com/#/playlist?id=755597173',
+    //     },
+    //   ],
+    // },
 
     // 页脚信息
     footer: {
