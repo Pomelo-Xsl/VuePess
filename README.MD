@@ -7,13 +7,13 @@
 3. 博客功能提供一种知识的`碎片化`形态，并支持个性化博客配置。
 4. `简洁高效`，以 Markdown 为中心的项目结构。内置自动化工具，以更少的配置完成更多的事。配合多维索引快速定位每个知识点。
 
-[**更新日志**](https://github.com/Pomelo-Xsl/VuePess.git)
+[**更新日志**](https://github.com/Pomelo-Xsl/VuePress.git)
 
 ## 快速上手
 
 ```bash
 # clone the project
-git clone https://github.com/Pomelo-Xsl/VuePess.git
+git clone https://github.com/Pomelo-Xsl/VuePress.git
 
 # enter the project directory
 cd vuepress-theme-vdoing
@@ -26,5 +26,5 @@ npm run dev # or yarn dev
 ```
 
 ## 致谢
-[**主题作者**](https://github.com/偷喝汽水/vuepress-theme-vdoing)
+[**主题作者**](https://github.com/Pomelo-Xsl/vuepress-theme-vdoing)
 

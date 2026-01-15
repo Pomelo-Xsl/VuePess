@@ -4,4 +4,4 @@ vuepress-theme-vdoing for vuepress
 
 一个基于VuePress的 知识管理兼博客 主题。
 
-[More](https://github.com/偷喝汽水/vuepress-theme-vdoing#readme).
+[More](https://github.com/Pomelo-Xsl/vuepress-theme-vdoing#readme).

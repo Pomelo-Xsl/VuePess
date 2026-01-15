@@ -5,13 +5,13 @@
   "author": {
     "name": "Pomelo"
   },
-  "homepage": "https://github.com/偷喝汽水/vuepress-theme-vdoing#readme",
+  "homepage": "https://github.com/Pomelo-Xsl/vuepress-theme-vdoing#readme",
   "bugs": {
-    "url": "https://github.com/偷喝汽水/vuepress-theme-vdoing/issues"
+    "url": "https://github.com/Pomelo-Xsl/vuepress-theme-vdoing/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/偷喝汽水/vuepress-theme-vdoing.git"
+    "url": "git+https://github.com/Pomelo-Xsl/vuepress-theme-vdoing.git"
   },
   "keywords": [
     "documentation",
