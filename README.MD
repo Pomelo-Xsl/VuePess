@@ -26,5 +26,5 @@ npm run dev # or yarn dev
 ```
 
 ## 致谢
-[**主题作者**](https://github.com/xugaoyi/vuepress-theme-vdoing)
+[**主题作者**](https://github.com/偷喝汽水/vuepress-theme-vdoing)
 
