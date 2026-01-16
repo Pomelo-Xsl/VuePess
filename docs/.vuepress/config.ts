@@ -141,12 +141,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       link: 'https://github.com/Pomelo-Xsl', // 可选的
     },
 
-    // 页脚信息
     footer: {
-      createYear: 2026, // 博客创建年份
+      createYear: 2026,
       copyrightInfo:
-        'Pomelo-XSL | <a href="https://github.com/Pomelo-Xsl/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a> | <a href="https://beian.miit.gov.cn/#/Integrated/recordQuery" target="_blank">粤ICP备2024340347号</a> | <img src="/img/beian.png" style="width: 15px; margin-bottom: -3px;" /> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=45142202000030" rel="noreferrer" target="_blank">公网安备45142202000030</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        'Pomelo-XSL<br/>' +
+        '<a href="https://beian.miit.gov.cn/#/Integrated/recordQuery" target="_blank">粤ICP备2024340347号</a> ' +
+        '<img src="/img/beian.png" style="width:14px;vertical-align:-2px;margin:0 4px;" />' +
+        '<a href="https://beian.mps.gov.cn/#/query/webSearch?code=45142202000030" target="_blank">公网安备45142202000030号</a>',
     },
+
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     extendFrontmatter: {
@@ -194,38 +197,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ],
 
     // 全文搜索。 ⚠️注意：此插件会在打开网站时多加载部分js文件用于搜索，导致初次访问网站变慢。如在意初次访问速度的话可以不使用此插件！（推荐：vuepress-plugin-thirdparty-search）
-    // 'fulltext-search',
-
-    // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
     [
-      'thirdparty-search',
-      {
-        thirdparty: [
-          {
-            title: '在MDN中搜索',
-            frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
-            behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
-          },
-          {
-            title: '在Runoob中搜索',
-            frontUrl: 'https://www.runoob.com/?s=',
-          },
-          {
-            title: '在Vue API中搜索',
-            frontUrl: 'https://cn.vuejs.org/v2/api/#',
-          },
-          {
-            title: '在Bing中搜索',
-            frontUrl: 'https://cn.bing.com/search?q=',
-          },
-          {
-            title: '通过百度搜索本站的',
-            frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
-          },
-        ],
-      }
+      'fulltext-search',
     ],
-
     [
       'one-click-copy', // 代码块复制按钮
       {
@@ -255,26 +229,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         selector: '.theme-vdoing-content img:not(.no-zoom)', // 排除class是no-zoom的图片
         options: {
           bgColor: 'rgba(0,0,0,0.6)',
-        },
-      },
-    ],
-    [
-      'vuepress-plugin-comment', // 评论
-      {
-        choosen: 'gitalk',
-        options: {
-          clientID: 'a6e1355287947096b88b',
-          clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          repo: 'VuePress', // GitHub 仓库
-          owner: 'Pomelo-Xsl', // GitHub仓库所有者
-          admin: ['Pomelo-Xsl'], // 对仓库有写权限的人
-          // distractionFreeMode: true,
-          pagerDirection: 'last', // 'first'正序 | 'last'倒序
-          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-          body:
-            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
         },
       },
     ],
